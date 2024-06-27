@@ -16,7 +16,7 @@ Sub CreateListOfFigures()
             
     ' Insert a new slide for the list of figures and choose the correct layer of the slide master
     Set indexSlide = ActivePresentation.Slides.Add(ActivePresentation.Slides.Count + 1, ppLayoutContentWithCaption) ' ### user input
-    indexSlide.Shapes(1).TextFrame.TextRange.Text = "Abbildungs-verzeichnis"
+    indexSlide.Shapes(1).TextFrame.TextRange.Text = "List of Figures"
     figureCount = 1
     currentFigures = 0
     
@@ -28,7 +28,7 @@ Sub CreateListOfFigures()
                 If currentFigures >= maxFiguresPerSlide Then
                     ' Insert a new slide for the list of figures and choose the correct layer of the slide master
                     Set indexSlide = ActivePresentation.Slides.Add(ActivePresentation.Slides.Count + 1, ppLayoutContentWithCaption) ' ### user input
-                    indexSlide.Shapes(1).TextFrame.TextRange.Text = "Abbildungs-verzeichnis"
+                    indexSlide.Shapes(1).TextFrame.TextRange.Text = "List of Figures"
                     maxFiguresPerSlide = maxFiguresPerSlide + maxFiguresPerSlideDef
                 End If
                 ' Add index number of figure and its alternative text as caption to the list of figures
