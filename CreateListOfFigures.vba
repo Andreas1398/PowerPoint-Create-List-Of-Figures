@@ -38,7 +38,7 @@ Sub CreateListOfFigures()
                     altText = "Kein Alternativtext"
                 End If
                 indexSlide.Shapes(2).TextFrame.TextRange.Text = indexSlide.Shapes(2).TextFrame.TextRange.Text & _
-                    "Abbildung " & figureCount & ": " & altText & vbCrLf
+                    "Figure " & figureCount & ": " & altText & vbCrLf
                 figureCount = figureCount + 1
                 currentFigures = currentFigures + 1
             End If
