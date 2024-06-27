@@ -24,6 +24,10 @@ Sub CreateListOfFigures()
     For Each slide In ActivePresentation.Slides
         For Each shape In slide.Shapes
             If shape.Type = msoPicture Then
+                Dim Left As Integer
+                Dim Top As Integer
+                Left = shape.Left
+                Top = shape.Top + shape.Height + 5
                 ' Check if maximum number of figures per slide is reached
                 If currentFigures >= maxFiguresPerSlide Then
                     ' Insert a new slide for the list of figures and choose the correct layer of the slide master
@@ -39,6 +43,13 @@ Sub CreateListOfFigures()
                 End If
                 indexSlide.Shapes(2).TextFrame.TextRange.Text = indexSlide.Shapes(2).TextFrame.TextRange.Text & _
                     "Figure " & figureCount & ": " & altText & vbCrLf
+                ' Insert Textbox under figure
+                Set textBox = slide.Shapes.AddTextbox(msoTextOrientationHorizontal, Left, Top, 300, 50)
+                textBox.TextFrame.TextRange.Text = "Abb. " & figureCount & ": " & altText
+                With textBox.TextFrame.TextRange
+                    .Font.Name = "Gill Sans MT"
+                    .Font.Size = 14
+                End With
                 figureCount = figureCount + 1
                 currentFigures = currentFigures + 1
             End If
