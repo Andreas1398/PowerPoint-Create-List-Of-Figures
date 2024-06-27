@@ -35,7 +35,7 @@ Sub CreateListOfFigures()
                 Dim altText As String
                 altText = shape.AlternativeText
                 If altText = "" Then
-                    altText = "Kein Alternativtext"
+                    altText = "No Alternative Text"
                 End If
                 indexSlide.Shapes(2).TextFrame.TextRange.Text = indexSlide.Shapes(2).TextFrame.TextRange.Text & _
                     "Figure " & figureCount & ": " & altText & vbCrLf
