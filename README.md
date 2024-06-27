@@ -13,3 +13,4 @@ Useful tipps while using it:
   1. Number of maximum lines per slide
   2. Name of the slide in the slide master (twice)
 - The Alternative Text of a figure is used as the caption
+- Rotated figures have a wrong placed text box in the slide itself as a result
