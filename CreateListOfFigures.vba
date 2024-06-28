@@ -45,7 +45,7 @@ Sub CreateListOfFigures()
                     "Figure " & figureCount & ": " & altText & vbCrLf
                 ' Insert Textbox under figure
                 Set textBox = slide.Shapes.AddTextbox(msoTextOrientationHorizontal, Left, Top, 300, 50)
-                textBox.TextFrame.TextRange.Text = "Abb. " & figureCount & ": " & altText
+                textBox.TextFrame.TextRange.Text = "Fig. " & figureCount & ": " & altText
                 With textBox.TextFrame.TextRange
                     .Font.Name = "Gill Sans MT"
                     .Font.Size = 14
